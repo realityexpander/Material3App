@@ -26,12 +26,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
 import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.SizeMode
+import com.realityexpander.material3app.ui.theme.Material3AppTheme
 import kotlin.random.Random
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -119,5 +121,17 @@ fun ImageCard(
                 )
             }
         }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview
+@Composable
+fun ImageCardPreview() {
+    Material3AppTheme {
+        ImageCard(
+            title = "Title-Changed",
+            description = "Description"
+        )
     }
 }
